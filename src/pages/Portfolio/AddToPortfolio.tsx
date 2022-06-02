@@ -6,10 +6,7 @@ interface IProps {
     setPortfolio: React.Dispatch<React.SetStateAction<IState["portfolio"]>>
 }
 
-
-
 const AddToPortfolio: React.FC<IProps> = ({portfolio, setPortfolio}) => {
-
     const [input, setInput] = useState({
         name: "",
         url: "",
