@@ -1,5 +1,6 @@
 import React, { Profiler, useState } from "react";
 import AddToPortfolio from "./AddToPortfolio";
+import {useParams} from "react-router-dom"
 
 export interface IState {
   portfolio: {
@@ -23,6 +24,8 @@ const Portfolio = () => {
     },
   ]);
 
+  let { username } = useParams();
+
   const renderList = () => {
     return portfolio.map((portf) => {
       return (
@@ -43,7 +46,7 @@ const Portfolio = () => {
 
   return (
     <div>
-      <h1>Portfolio</h1>
+      <h1>This is {username}'s portfolio!</h1>
       <ul>{renderList()}</ul>
       <AddToPortfolio portfolio={portfolio} setPortfolio={setPorfolio}/>
     </div>

@@ -16,12 +16,12 @@ function App() {
       <nav className="navbar navbar-dark bg-light d-flex justify-content-around p-1">
         <Link to="/" className="link-dark">Main page</Link>
         <Link to="/images" className="btn btn-secondary btn-lg active p-2">Images</Link>
-        <Link to="/portfolio" className="btn btn-secondary btn-lg active p-2">Portfolio</Link>
+        <Link to="/portfolio/:username" className="btn btn-secondary btn-lg active p-2">Portfolio</Link>
       </nav>
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/images" element={<Images />} />
-        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/portfolio/:username" element={<Portfolio />} />
       </Routes>
       <Footer/>
     </div>
